@@ -5,7 +5,7 @@ export default function Breakfasts(){
 
     return(
         <div className="asfsdf">
-            fasdfsadf
+            Breakfasts
         </div>
     )
 }

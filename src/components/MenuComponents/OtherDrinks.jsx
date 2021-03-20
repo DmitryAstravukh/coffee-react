@@ -5,7 +5,7 @@ export default function OtherDrinks(){
 
     return(
         <div className="asfsdf">
-            fasdfsadf
+            OtherDrinks
         </div>
     )
 }

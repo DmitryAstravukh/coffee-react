@@ -5,7 +5,7 @@ export default function MainMenu(){
 
     return(
         <div className="asfsdf">
-            fasdfsadf
+            MainMenu
         </div>
     )
 }
