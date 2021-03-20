@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import backButton from "../../../content/imgs/back.svg";
-import coffeeCup from "../../../content/imgs/code_cup.svg";
-import cookieIcon from "../../../content/imgs/cookie_button.svg";
-import db from "../../../services/firebase.js";
-import './FormFrame.scss';
+import backButton from "../content/imgs/back.svg";
+import coffeeCup from "../content/imgs/code_cup.svg";
+import cookieIcon from "../content/imgs/cookie_button.svg";
+import db from "../services/firebase.js";
+import "./FormFrame.scss";
 
 export default function FormFrame({ video, descr, img }) {
   const ref = useRef(null);
@@ -175,17 +175,15 @@ export default function FormFrame({ video, descr, img }) {
                 id="submit"
                 className="form__button"
                 id="cookieButton"
-                disabled = {
+                disabled={
                   !nameInputValid || !emailInputValid || !phoneInputValid
                 }
                 onClick={async (e) => {
-                  await db
-                    .collection("applications")
-                    .add({
-                      name: nameInput,
-                      email: emailInput,
-                      phone: phoneInput,
-                    });
+                  await db.collection("applications").add({
+                    name: nameInput,
+                    email: emailInput,
+                    phone: phoneInput,
+                  });
                   setNameInput("");
                   setEmailInput("");
                   setPhoneInput("");
@@ -193,15 +191,13 @@ export default function FormFrame({ video, descr, img }) {
               >
                 <span>Отправить</span>
               </button>
-              
-                <span className="fb_1">
+
+              <span className="fb_1">
                 <img src={coffeeCup} alt="cup" />{" "}
               </span>
               <span className="fb_2">
                 <img src={cookieIcon} alt="cookie" className="cookie" />{" "}
               </span>
-               
-              
             </div>
           </form>
         </div>

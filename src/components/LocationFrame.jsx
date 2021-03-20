@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 
-import instagram from "../../../content/imgs/instagram.svg";
-import vk from "../../../content/imgs/vk.svg";
-import facebook from "../../../content/imgs/facebook.svg";
+import instagram from "../content/imgs/instagram.svg";
+import vk from "../content/imgs/vk.svg";
+import facebook from "../content/imgs/facebook.svg";
 
 export default function LocationFrame({ video, descr, img }) {
   const ref = useRef(null);
